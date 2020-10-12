@@ -1,0 +1,175 @@
+body{
+    border: purple solid 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+   
+}
+
+#alphabet {
+    border: black solid 5px;
+    grid-row: 3;
+    grid-column: 2 / span 2;
+}
+
+.flex-container {
+    border: red solid 5px;
+    list-style-type: none;
+    display: flex; 
+    flex-wrap: wrap;
+    text-align: center;
+   
+}
+
+li {
+    border: blue solid 1px;
+    height: 80px;
+    width: 80px; 
+}
+
+#hangman {
+    grid-row: 2;
+    grid-column: 3;
+} 
+
+#hangman .base {
+    background-color: black;
+    height: 2px;
+    width: 200px;
+    margin: 0px;
+}
+
+#hangman .middle-bar {
+    background-color: black;
+    height: 200px;
+    width: 2px;
+}
+
+#hangman .top-bar {
+    background-color: black;
+    height: 2px;
+    width: 130px;
+    float: top;
+}
+
+#hangman .hold-bar {
+    background-color: black;
+    height: 20px;
+    width: 2px;
+    margin-left: 130px;
+    margin-bottom: -20px;
+}
+
+#hangman .head1 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly1.png);
+    background-size: auto 100%;
+    height: 30px; 
+    width: 30px; 
+    margin-left: 115px;
+    margin-top: -180px;
+}
+
+#hangman .head1 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly1.png);
+    background-size: auto 100%;
+    height: 30px; 
+    width: 30px; 
+    margin-left: 115px;
+    margin-top: -180px;
+}
+
+#hangman .body2 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly2.png);
+    background-size: auto 100%;
+    height: 50px; 
+    width: 30px; 
+    margin-left: 110px;
+}
+
+#hangman .right-arm3 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly3.png);
+    background-size: auto 100%;
+    height: 40px; 
+    width: 30px; 
+    margin-left: 140px;
+    margin-top: -80px;
+}
+
+#hangman .left-arm4 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly4.png);
+    background-size: auto 100%;
+    height: 40px; 
+    width: 30px; 
+    margin-left: 85px;
+    margin-top: -40px;
+}
+
+#hangman .lowerbody5 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly5.png);
+    background-size: auto 100%;
+    height: 20px; 
+    width: 25px; 
+    margin-left: 115px;
+    margin-top: 40px;
+}
+
+#hangman .left-leg6 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly6.png);
+    background-size: auto 100%;
+    height: 60px; 
+    width: 20px; 
+    margin-left: 100px;
+    
+}
+
+#hangman .right-leg7 {
+    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly7.png);
+    background-size: auto 100%;
+    height: 60px; 
+    width: 20px; 
+    margin-left: 130px;
+    margin-top: -60px;
+    
+}
+
+#userInputs  {
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.spanHolder {
+    font-size: 30px;
+    margin: 0 10px;
+    letter-spacing: 15px;
+    background-color: lightgray;
+    border-bottom: thin solid black;
+    display: inline-block;
+}
+
+span {
+    visibility: hidden;    
+}
+
+#usedLetters {
+    grid-row: 2;
+    grid-column: 1;
+    height: 80%;
+    width: 80%;
+    border: black solid 2px;
+    align-self: center;
+    justify-self: center;
+}
+
+button {
+    background-color: limegreen;
+    color: black;
+    font-size: 25px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
+    height: 100px;
+    width: 100px;
+    grid-column: 4;
+}
