@@ -15,6 +15,22 @@ body{
    
 }
 
+h1 {
+    font-family: Creepster, Helvetica, sans-serif;
+    font-size: 140px;
+    color: darkorange; 
+    margin-left: 80px;
+    margin-top: -10px;
+    transition: font 2s;
+
+}
+
+h1:hover {
+    font-size: 160px;
+}
+
+
+
 #alphabet {
     grid-row: 3;
     grid-column: 2 / span 2;
@@ -39,6 +55,12 @@ li {
     font-size: 25px;
     padding: 5px;
     margin: 2px;
+}
+
+li:hover {
+    border: orange solid 2px;
+    height: 56px;
+    width: 56px;
 }
 
 #hangman {
@@ -193,7 +215,12 @@ p {
 	width: 50px;
 	border-radius: 50%;
 	margin: 40px 0 0 0;
-	background: #110D04;
+    background: #110D04;
+    transition: 1s;
+}
+
+.spider:hover {
+    margin: 30px 0 0 0;
 }
 
 .spider2 {
@@ -203,7 +230,12 @@ p {
 	width: 50px;
 	border-radius: 50%;
 	margin: 40px 0 0 200px;
-	background: #110D04;
+    background: #110D04;
+    transition: 1s;
+}
+
+.spider2:hover {
+    margin: 30px 0 0 200px;
 }
 
 .spider3 {
@@ -213,7 +245,12 @@ p {
 	width: 50px;
 	border-radius: 50%;
 	margin: 100px 0 0 100px;
-	background: #110D04;
+    background: #110D04;
+    transition: 1s;
+}
+
+.spider3:hover {
+    margin: 80px 0 0 100px;
 }
 
 .eye {
@@ -317,4 +354,11 @@ button {
     height: 50px;
     width: 200px;
     grid-column: 4;
+    transition: 1s;
+}
+
+button:hover {
+    font-size: 27px;
+    height: 52px;
+    width: 205px;
 }
