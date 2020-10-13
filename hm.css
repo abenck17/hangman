@@ -153,9 +153,9 @@ li {
     display: inline-block;
 }
 
-span {
+/* span {
     visibility: hidden;    
-}
+} */
 
 #lettersBin {
     grid-row: 2;
