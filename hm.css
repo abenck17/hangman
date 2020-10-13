@@ -76,6 +76,7 @@ li {
     width: 30px; 
     margin-left: 115px;
     margin-top: -180px;
+    visibility: hidden;
 }
 
 #hangman .body2 {
@@ -84,6 +85,7 @@ li {
     height: 50px; 
     width: 30px; 
     margin-left: 110px;
+    visibility: hidden;
 }
 
 #hangman .right-arm3 {
@@ -93,6 +95,7 @@ li {
     width: 30px; 
     margin-left: 140px;
     margin-top: -80px;
+    visibility: hidden;
 }
 
 #hangman .left-arm4 {
@@ -102,6 +105,7 @@ li {
     width: 30px; 
     margin-left: 85px;
     margin-top: -40px;
+    visibility: hidden;
 }
 
 #hangman .lowerbody5 {
@@ -111,6 +115,7 @@ li {
     width: 25px; 
     margin-left: 115px;
     margin-top: 40px;
+    visibility: hidden;
 }
 
 #hangman .left-leg6 {
@@ -119,7 +124,7 @@ li {
     height: 60px; 
     width: 20px; 
     margin-left: 100px;
-    
+    visibility: hidden;   
 }
 
 #hangman .right-leg7 {
@@ -129,7 +134,7 @@ li {
     width: 20px; 
     margin-left: 130px;
     margin-top: -60px;
-    
+    visibility: hidden;
 }
 
 #userInputs  {
@@ -152,7 +157,7 @@ span {
     visibility: hidden;    
 }
 
-#usedLetters {
+#lettersBin {
     grid-row: 2;
     grid-column: 1;
     height: 80%;

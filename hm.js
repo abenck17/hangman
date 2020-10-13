@@ -1,11 +1,13 @@
 console.log("issa me a working")
 
-let randomWords = ['Truck', 'Taco', 'Wrap', 'Ball', 'Meat']; // list of random words to pull from for the game
+let randomWords = ['truck', 'taco', 'wrap', 'ball', 'meat']; // list of random words to pull from for the game
 let selectedWords = ''; // variable to store randomWord selected
 let livesLeft = 7; // numbers of lives user has left until they lose
-let usedLetters = []; // stores the letters that failed for the user 
 userInputs = document.querySelector("#userInputs");
-spanAll = document.querySelectorAll("#useerInputs .spanHolder");
+usedP = document.querySelector("p");
+spanAll = document.querySelectorAll("#userInputs .spanHolder");
+console.log(usedP) // need to pull span letters
+console.log(spanAll)
 
 // let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'] 
 
@@ -13,7 +15,7 @@ letterClick = document.querySelectorAll("li");
 actualLetters = document.querySelectorAll(".alph")
 resetGame = document.querySelector("#resetButton");
 
-console.log(actualLetters)
+console.log(letterClick[0].innerHTML)
 
 function hangman() {
     this.randomWords;
@@ -21,15 +23,6 @@ function hangman() {
     this.livesLeft;
     this.usedLetters;
 } 
-
-// letter clicks
-
-letterClick.forEach(function pickLetter(let) {
-
-    let.addEventListener('click', function() {
-         console.log(let);   
-    }) 
-})
 
 // reset game
 
@@ -55,10 +48,10 @@ function pickRandomWord() {
 function assignRandomWord() {
     pickRandomWord();
     console.log(selectedWords)
-    let newWord = '';
+    let newWord;
     
     for (i=0; i < selectedWords.length; i++) {
-        newWord = selectedWords.charAt(i) + " "
+        newWord = selectedWords.charAt(i);
         
         let newDiv = document.createElement("div")
             newDiv.setAttribute("class", "spanHolder")
@@ -67,37 +60,87 @@ function assignRandomWord() {
         newDiv.appendChild(newSpan);
         userInputs.appendChild(newDiv);
     }
-    console.log(userInputs);
-    console.log(spanAll);
+    // console.log(userInputs);
+    // console.log(spanAll);
 }
-assignRandomWord();
+// assignRandomWord();
 
 
 // // function to pick letters in game 
 
-function userPicksLetter(letter) {
+function userPicksLetter() {
    pickRandomWord();
    assignRandomWord();
+   usedLetters = []; // stores the letters that failed for the user // moved in from top of code 
+    
+// for (let i = 0; i < selectedWords.length; i++) {
+   
+    // letter clicks
 
-    letter = '';
+    letterClick.forEach(function pickLetter(let) {
 
-    for (let i = 0; i < selectedWords.length; i++) {
-    if (this.usedLetters.indexOf(letter) > -1) {
+    let.addEventListener('click', function() {
+        var alpha = let.innerHTML
+        console.log(alpha)   
+
+    if (usedLetters.indexOf(alpha) > -1) {
         return;
       }
-        this.usedLetters.push(letter);
     
+    usedLetters.push(alpha); // need to show in usedletters box
+    usedP.innerHTML = usedLetters.toString();
     
-    if (this.selectedWords.indexOf(letter) > -1) {
-        console.log("user got one right");
-    } else {
-        this.livesLeft -= 1;
-        alert("Ouch.. You have lost one life")
-    }    
-}
-}
+    // for (i=0; i < selectedWords.length; i++) {
+    //     if (selectedWords.charAt(i) == alpa) {
+    //         console.log("user got one right")
+    //     }
 
-// userPicksLetter(a);
+    console.log(spanAll);
+    if (selectedWords.indexOf(alpha) > -1) { // not working with first letter ? 
+        console.log("user got one right");
+        console.log(alpha)
+    } else {
+        livesLeft -= 1;
+        alert("Ouch.. You have lost one life");  
+    }
+    console.log(usedLetters);
+    console.log(livesLeft);
+
+    // to get the skeleton to show 
+
+    if (livesLeft == 6) {
+       document.querySelector(".head1").style.visibility = 'visible';
+    }
+    else if (livesLeft == 5) {
+        document.querySelector(".body2").style.visibility = 'visible';
+     }
+    else if (livesLeft == 4) {
+        document.querySelector(".right-arm3").style.visibility = 'visible';
+     }
+    else if (livesLeft == 3) {
+        document.querySelector(".left-arm4").style.visibility = 'visible';
+     }
+    else if (livesLeft == 2) {
+        document.querySelector(".lowerbody5").style.visibility = 'visible';
+     }
+    else if (livesLeft == 1) {
+        document.querySelector(".left-leg6").style.visibility = 'visible';
+     }
+    else if (livesLeft == 0) {
+        document.querySelector(".right-leg7").style.visibility = 'visible';
+        alert ("BOOO, YOU LOSE. RESET GAME TO TRY AGAIN")
+     }
+
+})
+})
+
+
+} 
+// }
+
+userPicksLetter();
+
+
 
 
 // userPicksLetter(); // still getting error: Uncaught TypeError: Cannot read property 'indexOf' of undefined @js26
