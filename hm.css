@@ -1,5 +1,14 @@
+html {
+	height: 100%;
+	width: 100%; 
+	overflow: hidden;
+	scroll: none;
+}
+
 body{
     background-color: rgb(235,235,235);
+    /* background-color: #2F5363; */
+	overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 100px 1fr 1fr;
@@ -175,6 +184,127 @@ li {
 
 p {
    font-size: 40px;
+}
+
+.spider {
+    grid-row: 3;
+    grid-column: 1;
+	height: 40px;
+	width: 50px;
+	border-radius: 50%;
+	margin: 40px 0 0 0;
+	background: #110D04;
+}
+
+.spider2 {
+    grid-row: 3;
+    grid-column: 1;
+	height: 40px;
+	width: 50px;
+	border-radius: 50%;
+	margin: 40px 0 0 200px;
+	background: #110D04;
+}
+
+.spider3 {
+    grid-row: 3;
+    grid-column: 1;
+	height: 40px;
+	width: 50px;
+	border-radius: 50%;
+	margin: 100px 0 0 100px;
+	background: #110D04;
+}
+
+.eye {
+    top: 16px;
+    height: 14px;
+    width: 12px;
+    margin-top: 5px;
+    margin-left: 14px;
+	background: #FFFFFF;
+	border-radius: 50%;
+}
+
+.eye2 {
+    top: 16px;
+    height: 14px;
+    width: 12px;
+    margin-left: 24px;
+    margin-top: -13px;
+	background: #FFFFFF;
+	border-radius: 50%;
+}
+
+.pupil {
+    top: 6px;
+	height: 5px;
+    width: 5px;
+    margin-top: -10px;
+    margin-left: 16px;
+	border-radius: 50%;
+	background: black;
+}
+
+.pupil2 {
+    top: 6px;
+	height: 5px;
+    width: 5px;
+    margin-top: -5px;
+    margin-left: 26px;
+	border-radius: 50%;
+	background: black;
+}
+
+.web {
+    top: -10px;
+    height: 850px; 
+    width: 2px;
+    margin-left: 25px;
+    margin-top: -860px;
+    background: black;  
+}
+
+.leg1 {
+    top: 6px;
+	height: 12px;
+	width: 25px;
+    border-top: 3px solid #110D04;
+    border-radius: 50%;
+    z-index: -1;
+    margin-left: -18px;
+}
+
+.leg2 {
+    top: 6px;
+	height: 12px;
+	width: 25px;
+    border-top: 3px solid #110D04;
+    border-radius: 50%;
+    z-index: -1;
+    margin-left: 45px;
+    margin-top: -13px;
+}
+
+.leg3 {
+    top: 6px;
+	height: 12px;
+	width: 25px;
+    border-top: 3px solid #110D04;
+    border-radius: 50%;
+    z-index: -1;
+    margin-left: -18px;
+}
+
+.leg4 {
+    top: 6px;
+	height: 12px;
+	width: 25px;
+    border-top: 3px solid #110D04;
+    border-radius: 50%;
+    z-index: -1;
+    margin-left: 45px;
+    margin-top: -13px;
 }
 
 button {
