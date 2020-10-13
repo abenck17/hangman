@@ -1,5 +1,5 @@
 // console.log("issa me a working")
-let randomWords = ['truck', 'taco', 'wrap', 'ball', 'meat']; // list of random words to pull from for the game
+let randomWords = ['pumpkin', 'death', 'witch', 'ghost', 'bat']; // list of random words to pull from for the game
 let selectedWords = ''; // variable to store randomWord selected
 let livesLeft = 7; // numbers of lives user has left until they lose
 userInputs = document.querySelector("#userInputs");
@@ -13,10 +13,9 @@ let newDiv;
 let newSpan;
 let newSpanClass = document.querySelector("#userInputs .spanHolder");
 let wonGameCounter = 0;
+let clickCounter = 0;
 
-
-
-// let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 letterClick = document.querySelectorAll("li");
 actualLetters = document.querySelectorAll(".alph")
 resetGame = document.querySelector("#resetButton");
@@ -75,24 +74,32 @@ function userPicksLetter() {
    pickRandomWord();
    assignRandomWord();
    usedLetters = []; // stores the letters that failed for the user // moved in from top of code
-// for (let i = 0; i < selectedWords.length; i++) {
+    
+   // for (let i = 0; i < selectedWords.length; i++) {
     // letter clicks
     letterClick.forEach(function pickLetter(let) {
     let.addEventListener('click', function() {
         var alpha = let.innerHTML
         console.log(alpha)
+        clickCounter = alphabet.indexOf(alpha); 
     if (usedLetters.indexOf(alpha) > -1) {
         return;
       }
 
     usedLetters.push(alpha); // need to show in usedletters box
     usedP.innerHTML = usedLetters.toString();
+    letterClick[clickCounter].style.color = "black"
 
     // for (i=0; i < selectedWords.length; i++) {
     //     if (selectedWords.charAt(i) == alpa) {
     //         console.log("user got one right")
     //     }
 
+    // for (i = 0; i < 26; i++) {
+    //     if (usedLetters.indexOf(alpha) > -1) {
+    //         console.log(letterClick[i].innerHTML);
+    //     }
+    // }
     console.log(useThis) // call this anywhere
     // console.log(newSpanClass);
     let spanLetter = document.getElementsByTagName("span");
@@ -115,7 +122,7 @@ function userPicksLetter() {
     if (wonGameCounter === useThis.length) {
         alert("YOU HAVE WON THE GAME!! RESET GAME TO PLAY AGAIN")
     }
-
+    
     if (useThis.indexOf(alpha) > -1) { // not working with first letter ?
         console.log("user got one right");
     } else {
