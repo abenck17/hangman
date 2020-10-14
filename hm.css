@@ -16,18 +16,33 @@ body{
 }
 
 h1 {
-    font-family: Creepster, Helvetica, sans-serif;
-    font-size: 140px;
-    color: darkorange; 
+    text-align: center;
+    font-family: 'Nosifer', cursive;
+    font-size: 80px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.9);
+    text-shadow: 5px 5px 0px darkred, 7px 7px 0px #707070;
     margin-left: 80px;
     margin-top: -10px;
     transition: font 2s;
+    
+    /* font-family: Creepster, Helvetica, sans-serif;
+    font-size: 140px;
+    color: darkorange; 
+    transition: font 2s; */
 
 }
 
 h1:hover {
-    font-size: 160px;
+    font-size: 85px;
 }
+
+h1 a {
+    font-family: Creepster, Helvetica, sans-serif;
+    font-size: 40px;
+    text-shadow: 2px 2px 0px darkorange, 4px 4px 0px #707070;
+}
+
 
 
 
@@ -52,6 +67,7 @@ li {
     height: 60px;
     width: 60px;
     text-align: center;
+    font-family:'Eater', cursive;
     font-size: 25px;
     padding: 5px;
     margin: 2px;
@@ -181,10 +197,11 @@ li:hover {
 }
 
 .spanHolder {
-    font-size: 30px;
+    font-family:'Eater', cursive;
+    font-size: 25px;
     margin: 0 10px;
     letter-spacing: 15px;
-    background-color: lightgray;
+    background-color: rgb(235,235,235);
     border-bottom: thin solid black;
     display: inline-block;
 }
@@ -199,9 +216,33 @@ li:hover {
     height: 80%;
     width: 80%;
     border: black solid 2px;
+    background-color: lightgray;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    align-self: center;
+    justify-self: center;
+    text-align: center;  
+    z-index: 2; 
+    font-family: 'Butcherman', cursive;
+    word-wrap: break-word;
+}
+
+#lettersBin2 {
+    grid-row: 2;
+    grid-column: 4;
+    height: 80%;
+    width: 80%;
+    margin: 0 0 25px 5px;
+    border: black solid 2px;
+    background-color: darkgrey;
+    border-bottom: none;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
     align-self: center;
     justify-self: center;
     text-align: center;
+    z-index: 1;
+    
 }
 
 p {
@@ -220,7 +261,7 @@ p {
 }
 
 .spider:hover {
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .spider2 {
@@ -235,7 +276,7 @@ p {
 }
 
 .spider2:hover {
-    margin: 30px 0 0 200px;
+    margin: 20px 0 0 200px;
 }
 
 .spider3 {
@@ -348,6 +389,7 @@ button {
     background-color: darkorange;
     color: black;
     font-size: 25px;
+    font-family: Creepster, Helvetica, sans-serif;
     border-radius: 20px 20px 20px 20px;
     padding: 10px;
     box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);

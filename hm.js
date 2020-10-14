@@ -120,8 +120,10 @@ function userPicksLetter() {
     console.log(wonGameCounter)
     
     if (wonGameCounter === useThis.length) {
-        alert("YOU HAVE WON THE GAME!! RESET GAME TO PLAY AGAIN")
-    }
+        alert("YOU HAVE WON THE GAME!! Reset Game to play again!")
+        // window.location.reload();
+        document.getElementById("alphabet").style.visibility = "hidden";
+    } 
     
     if (useThis.indexOf(alpha) > -1) { // not working with first letter ?
         console.log("user got one right");
@@ -152,7 +154,8 @@ function userPicksLetter() {
      }
     else if (livesLeft == 0) {
         document.querySelector(".right-leg7").style.visibility = 'visible';
-        alert ("BOOO, YOU LOSE. RESET GAME TO TRY AGAIN")
+        alert ("BOOO, YOU LOSE. RESET GAME TO TRY AGAIN");
+        document.getElementById("alphabet").style.visibility = "hidden";
      }
 })
 })
