@@ -1,5 +1,5 @@
 // console.log("issa me a working")
-let randomWords = ['pumpkin', 'death', 'witch', 'ghost', 'bat']; // list of random words to pull from for the game
+let randomWords = ['pumpkin', 'death', 'witch', 'ghost', 'bat', 'blood', 'broom', 'cauldron', 'cemetary', 'coffin', 'mummy', 'vampire', 'werewolf', 'wicked', 'zombie']; // list of random words to pull from for the game
 let selectedWords = ''; // variable to store randomWord selected
 let livesLeft = 7; // numbers of lives user has left until they lose
 userInputs = document.querySelector("#userInputs");
@@ -14,6 +14,7 @@ let newSpan;
 let newSpanClass = document.querySelector("#userInputs .spanHolder");
 let wonGameCounter = 0;
 let clickCounter = 0;
+let buttonClick = document.getElementById("mouseclick"); 
 
 let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 letterClick = document.querySelectorAll("li");
@@ -29,6 +30,7 @@ function hangman() {
 // reset game
 resetButton.addEventListener('click', function resetGame(event) {
     event.preventDefault();
+    // buttonClick.play();
     window.location.reload();
     console.log("click works")
 })
@@ -79,6 +81,7 @@ function userPicksLetter() {
     // letter clicks
     letterClick.forEach(function pickLetter(let) {
     let.addEventListener('click', function() {
+        // buttonClick.play();
         var alpha = let.innerHTML
         console.log(alpha)
         clickCounter = alphabet.indexOf(alpha); 
