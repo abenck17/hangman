@@ -114,7 +114,7 @@ li:hover {
 }
 
 #hangman .head1 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly1.png);
+    background-image: url(images/Skeleton/Skelly1.png);
     background-size: auto 100%;
     height: 30px; 
     width: 25px; 
@@ -123,7 +123,7 @@ li:hover {
 }
 
 #hangman .head1 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly1.png);
+    background-image: url(images/Skeleton/Skelly1.png);
     background-size: auto 100%;
     height: 30px; 
     width: 30px; 
@@ -133,7 +133,7 @@ li:hover {
 }
 
 #hangman .body2 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly2.png);
+    background-image: url(images/Skeleton/Skelly2.png);
     background-size: auto 100%;
     height: 50px; 
     width: 30px; 
@@ -142,7 +142,7 @@ li:hover {
 }
 
 #hangman .right-arm3 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly3.png);
+    background-image: url(images/Skeleton/Skelly3.png);
     background-size: auto 100%;
     height: 40px; 
     width: 30px; 
@@ -152,7 +152,7 @@ li:hover {
 }
 
 #hangman .left-arm4 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly4.png);
+    background-image: url(images/Skeleton/Skelly4.png);
     background-size: auto 100%;
     height: 40px; 
     width: 30px; 
@@ -162,7 +162,7 @@ li:hover {
 }
 
 #hangman .lowerbody5 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly5.png);
+    background-image: url(images/Skeleton/Skelly5.png);
     background-size: auto 100%;
     height: 20px; 
     width: 25px; 
@@ -172,7 +172,7 @@ li:hover {
 }
 
 #hangman .left-leg6 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly6.png);
+    background-image: url(images/Skeleton/Skelly6.png);
     background-size: auto 100%;
     height: 60px; 
     width: 20px; 
@@ -181,7 +181,7 @@ li:hover {
 }
 
 #hangman .right-leg7 {
-    background-image: url(/Users/ab60241/Desktop/Skeleton/Skelly7.png);
+    background-image: url(images/Skeleton/Skelly7.png);
     background-size: auto 100%;
     height: 60px; 
     width: 20px; 
@@ -406,9 +406,10 @@ button:hover {
     width: 205px;
 }
 
-@media only screen and (max-width:620px) {
+@media only screen and (max-width:500px) and (max-height: 500px) {
     /* For mobile phones: */
     * {
       width:100%;
+      height: 100%;
     }
   }
