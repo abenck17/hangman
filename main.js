@@ -1,36 +1,32 @@
-// console.log("issa me a working")
+
 let randomWords = ['pumpkin', 'death', 'witch', 'ghost', 'bat', 'blood', 'broom', 'cauldron', 'cemetary', 'coffin', 'mummy', 'vampire', 'werewolf', 'wicked', 'zombie']; // list of random words to pull from for the game
 let selectedWords = ''; // variable to store randomWord selected
 let livesLeft = 7; // numbers of lives user has left until they lose
 userInputs = document.querySelector("#userInputs");
 usedP = document.querySelector("p");
 spanAll = document.querySelectorAll("#userInputs span");
-// console.log(usedP) // need to pull span letters
-// console.log(spanAll)
 const useThis = [] // creating blank array globally - to be able to call this array from any function / works with each game instance 
 let newDiv;
-//     newDiv.setAttribute("class", "spanHolder")
 let newSpan;
 let newSpanClass = document.querySelector("#userInputs .spanHolder");
 let wonGameCounter = 0;
 let clickCounter = 0;
-let buttonClick = document.getElementById("mouseclick"); 
-
 let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 letterClick = document.querySelectorAll("li");
 actualLetters = document.querySelectorAll(".alph")
 resetGame = document.querySelector("#resetButton");
 console.log(letterClick[0].innerHTML)
+
 function hangman() {
     this.randomWords;
     this.selectedWords;
     this.livesLeft;
     this.usedLetters;
 }
+
 // reset game
 resetButton.addEventListener('click', function resetGame(event) {
     event.preventDefault();
-    // buttonClick.play();
     window.location.reload();
     console.log("click works")
 })
@@ -38,9 +34,7 @@ resetButton.addEventListener('click', function resetGame(event) {
 function pickRandomWord() {
     selectedWords = randomWords[Math.floor(Math.random() * randomWords.length)];
 }
-// pickRandomWord(); // pulls a random word from randomWords
-// console.log(selectedWords);
-// function to assing random word
+
 function assignRandomWord() {
     pickRandomWord();
     console.log(selectedWords)
@@ -52,25 +46,13 @@ function assignRandomWord() {
             newDiv.setAttribute("class", "spanHolder")
         newSpan = document.createElement("span");
             newSpan.setAttribute("class", newWord);
-            // console.log(newSpan)
         newSpan.style.visibility = "hidden";
         newSpan.innerHTML = newWord;
         newDiv.appendChild(newSpan);
         userInputs.appendChild(newDiv);
-
-        // let needThis = newSpan.innerHTML
     }
-    // console.log(userInputs);
-    // console.log(spanAll);
 }
 
-// let thisSpan = document.getElementsByClassName("spanHolder");
-
-
-
-
-
-// assignRandomWord();
 // // function to pick letters in game
 function userPicksLetter() {
    pickRandomWord();
@@ -81,7 +63,6 @@ function userPicksLetter() {
     // letter clicks
     letterClick.forEach(function pickLetter(let) {
     let.addEventListener('click', function() {
-        // buttonClick.play();
         var alpha = let.innerHTML
         console.log(alpha)
         clickCounter = alphabet.indexOf(alpha); 
@@ -92,21 +73,7 @@ function userPicksLetter() {
     usedLetters.push(alpha); // need to show in usedletters box
     usedP.innerHTML = usedLetters.toString();
     letterClick[clickCounter].style.color = "black"
-
-    // for (i=0; i < selectedWords.length; i++) {
-    //     if (selectedWords.charAt(i) == alpa) {
-    //         console.log("user got one right")
-    //     }
-
-    // for (i = 0; i < 26; i++) {
-    //     if (usedLetters.indexOf(alpha) > -1) {
-    //         console.log(letterClick[i].innerHTML);
-    //     }
-    // }
-    console.log(useThis) // call this anywhere
-    // console.log(newSpanClass);
     let spanLetter = document.getElementsByTagName("span");
-    console.log(spanLetter[0].innerHTML)
 
     for (i = 0; i < useThis.length; i++) {
         if (spanLetter[i].innerHTML == alpha) {
@@ -114,10 +81,6 @@ function userPicksLetter() {
             spanLetter[i].style.visibility = "visible";
             wonGameCounter += 1;
         }  
-    // else {
-    //         livesLeft -= 1;
-    //         alert("Ouch.. You have lost one life.");
-    //     }
     }
     console.log(useThis.length)
     console.log(wonGameCounter)
@@ -163,7 +126,5 @@ function userPicksLetter() {
 })
 })
 }
-// }
+
 userPicksLetter();
-// userPicksLetter(); // still getting error: Uncaught TypeError: Cannot read property 'indexOf' of undefined @js26
-// console.log(usedLetters);
