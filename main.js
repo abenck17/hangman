@@ -1,21 +1,21 @@
 
-let randomWords = ['pumpkin', 'death', 'witch', 'ghost', 'bat', 'blood', 'broom', 'cauldron', 'cemetary', 'coffin', 'mummy', 'vampire', 'werewolf', 'wicked', 'zombie']; // list of random words to pull from for the game
-let selectedWords = ''; // variable to store randomWord selected
-let livesLeft = 7; // numbers of lives user has left until they lose
-userInputs = document.querySelector("#userInputs");
-usedP = document.querySelector("p");
-spanAll = document.querySelectorAll("#userInputs span");
-const useThis = [] // creating blank array globally - to be able to call this array from any function / works with each game instance 
+let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+let clickCounter = 0;
 let newDiv;
 let newSpan;
 let newSpanClass = document.querySelector("#userInputs .spanHolder");
+let livesLeft = 7; // numbers of lives user has left until they lose
+let randomWords = ['pumpkin', 'death', 'witch', 'ghost', 'bat', 'blood', 'broom', 'cauldron', 'cemetary', 'coffin', 'mummy', 'vampire', 'werewolf', 'wicked', 'zombie']; // list of random words to pull from for the game
+let selectedWords = ''; // variable to store randomWord selected
 let wonGameCounter = 0;
-let clickCounter = 0;
-let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-letterClick = document.querySelectorAll("li");
+const useThis = [] // creating blank array globally - to be able to call this array from any function / works with each game instance 
+
 actualLetters = document.querySelectorAll(".alph")
+letterClick = document.querySelectorAll("li");
 resetGame = document.querySelector("#resetButton");
-console.log(letterClick[0].innerHTML)
+spanAll = document.querySelectorAll("#userInputs span");
+userInputs = document.querySelector("#userInputs");
+usedP = document.querySelector("p");
 
 function hangman() {
     this.randomWords;
@@ -59,8 +59,6 @@ function userPicksLetter() {
    assignRandomWord();
    usedLetters = []; // stores the letters that failed for the user // moved in from top of code
     
-   // for (let i = 0; i < selectedWords.length; i++) {
-    // letter clicks
     letterClick.forEach(function pickLetter(let) {
     let.addEventListener('click', function() {
         var alpha = let.innerHTML
@@ -77,13 +75,10 @@ function userPicksLetter() {
 
     for (i = 0; i < useThis.length; i++) {
         if (spanLetter[i].innerHTML == alpha) {
-            console.log("it's working");
             spanLetter[i].style.visibility = "visible";
             wonGameCounter += 1;
         }  
     }
-    console.log(useThis.length)
-    console.log(wonGameCounter)
     
     if (wonGameCounter === useThis.length) {
         alert("YOU HAVE WON THE GAME!! Reset Game to play again!")
@@ -97,8 +92,7 @@ function userPicksLetter() {
         livesLeft -= 1;
         alert(`Ouch.. You have lost one life. You know have ${livesLeft} lives left`);
     }
-    console.log(usedLetters);
-    console.log(livesLeft);
+    
     // to get the skeleton to show
     if (livesLeft == 6) {
        document.querySelector(".head1").style.visibility = 'visible';
